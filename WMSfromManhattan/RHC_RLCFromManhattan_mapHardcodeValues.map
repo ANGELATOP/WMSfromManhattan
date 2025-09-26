@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="/INVENTORY_RECEIPT_INB.xsd"/>
+    <output path="/INVENTORY_RECEIPT_INB.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="RHC_RLCFromManhattan_mapHardcodeValues">
+        <input path="mb:msg(INVENTORY_RECEIPT_IFD,assembly,XMLNSC,Properties)" var="MessageAssembly"/>
+        <output path="mb:msg(INVENTORY_RECEIPT_IFD,assembly,XMLNSC,Properties)" var="MessageAssembly1"/>
+        <foreach>
+            <input path="$MessageAssembly/INVENTORY_RECEIPT_IFD/CTRL_SEG/INVENTORY_RECEIPT_IFD_SEG" var="INVENTORY_RECEIPT_IFD_SEG"/>
+            <output path="$MessageAssembly1/INVENTORY_RECEIPT_IFD/CTRL_SEG/INVENTORY_RECEIPT_IFD_SEG"/>
+            <move>
+                <input path="$INVENTORY_RECEIPT_IFD_SEG/."/>
+                <output path="."/>
+                <override>
+                    <assign value="INV-RCV">
+                        <output path="TRANID"/>
+                    </assign>
+                    <assign value="----">
+                        <output path="PRT_CLIENT_ID"/>
+                    </assign>
+                    <assign value="A">
+                        <output path="RCVSTS"/>
+                    </assign>
+                    <assign value="P">
+                        <output path="INVTYP"/>
+                    </assign>
+                </override>
+            </move>
+        </foreach>
+        <assign value="INV-RCV">
+            <output path="$MessageAssembly1/INVENTORY_RECEIPT_IFD/CTRL_SEG/TRNNAM"/>
+        </assign>
+        <assign value="0002">
+            <output path="$MessageAssembly1/INVENTORY_RECEIPT_IFD/CTRL_SEG/TRNVER"/>
+        </assign>
+    </mappingDeclaration>
+</mappingRoot>

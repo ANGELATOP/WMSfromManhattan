@@ -1,0 +1,12 @@
+
+<!-- Using this so I can create schema and test file to create a possible JSON file from Manhattan using ACE --> 
+<root>
+<header fclty="14" invnum="14055933320250907180543" supnum="14053683001" />
+<items>
+	<item prtnum="0982019" rcvqty="72"   seqNbr="1" />
+	<item prtnum="0978684" rcvqty="126"  seqNbr="2" />
+	<item prtnum="0954216" rcvqty="18"   seqNbr="3" />
+	<item prtnum="0947184" rcvqty="252"  seqNbr="4" />
+	<item prtnum="0898668" rcvqty="126"  seqNbr="5" />
+</items>
+</root>

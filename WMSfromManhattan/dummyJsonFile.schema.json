@@ -1,0 +1,42 @@
+{
+  "ContextInformation": {
+    "Messages": null,
+    "Organization": "100",
+    "UserId": "",
+    "UserLocale": "UTC",
+    "Location": "LUF"
+  },
+  "CurrentPage": 1,
+  "ExportDocuments": [
+{
+    "Messages": null,
+    "PIXSpecification": "ASN_Level",
+    "Description": "ASN Level Variance",
+    "SourceTransactionType": "Receiving",
+    "SourceEventName": "Verify_ASN",
+    "PIXFields": {
+        "BusinessUnitId": "",
+        "ExternalOrganizationId": "",
+        "RrnId": "",
+        "AsnLevelId": "LPN",
+        "CreatedBy": "inadmin",
+        "AsnId": "UnifiedAS202",
+        "AsnStatus": "8000",
+        "AsnOriginTypeId": "S",
+        "ReceiptVariance": "N",
+        "ReceiptsCompleted": "Y",
+        "iLPNsShipped": "2",
+        "iLPNsReceived": "2",
+        "UnitsShipped": "30.0000",
+        "UnitsReceived": "30.0000"
+    },
+    "TransactionNumber": "7456069701051551905",
+    "SequenceNumber": 3,
+    "TransactionDateTime": "2025-04-25T18:49:29.977",
+    "Organization": "INO",
+    "Facility": "INDC"
+}
+  ],
+  "UniqueJobId": "f57a53d7-5a01-4b99-9850-d779de4b8c51",
+  "TotalPages": 1
+}

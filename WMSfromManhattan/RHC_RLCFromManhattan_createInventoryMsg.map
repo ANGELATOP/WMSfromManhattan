@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.5.0" xmlns:map="default">
+    <input path="jar:file://!com/ibm/etools/mft/map/xsds/predefined/JsonDomainMsg.xsd" var="var1"/>
+    <input derivedFrom="MB:JSON_schema_in_json_file" path="/PIXSpecification-ITEM_Level.schema.json" var="var"/>
+    <output path="/INVENTORY_RECEIPT_INB.xsd"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/iib/msl/json"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="RHC_RLCFromManhattan_createInventoryMsg">
+        <input namespace="http://www.ibm.com/iib/msl/json" path="$var1/mb:msg(JSON,assembly,JSON,Properties)">
+            <cast derivedFrom="MB:JSON_TYPE" path="JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}PIXSpecification-ITEM_Level.schema_JsonType" ref="var"/>
+        </input>
+        <output path="mb:msg(INVENTORY_RECEIPT_IFD,assembly,XMLNSC,Properties)"/>
+        <foreach>
+            <input path="JSON/spath('Data',2)/ExportDocuments/Item"/>
+            <output path="INVENTORY_RECEIPT_IFD/CTRL_SEG/INVENTORY_RECEIPT_IFD_SEG"/>
+            <move>
+                <input path="ItemDefinition/ItemId"/>
+                <output path="PRTNUM"/>
+            </move>
+            <move>
+                <input path="PIXFields/UnitsReceived"/>
+                <output path="RCVQTY"/>
+            </move>
+            <move>
+                <input path="Facility"/>
+                <output path="WH_ID"/>
+            </move>
+            <move>
+                <input path="Facility"/>
+                <output path="SITCOD"/>
+            </move>
+        </foreach>
+    </mappingDeclaration>
+</mappingRoot>
