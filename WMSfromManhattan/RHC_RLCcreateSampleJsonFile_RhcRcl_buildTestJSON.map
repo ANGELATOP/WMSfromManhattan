@@ -6,7 +6,7 @@
         <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/iib/msl/json"/>
     </namespaces>
     <generation engine="xquery"/>
-    <mappingDeclaration name="CreateSampleManhattanJsonFile_RhcRcl_buildTestJSON">
+    <mappingDeclaration name="RHC_RLCcreateSampleJsonFile_RhcRcl_buildTestJSON">
         <input path="mb:msg(root,assembly,XMLNSC,Properties)" var="MessageAssembly"/>
         <output namespace="http://www.ibm.com/iib/msl/json" path="$var1/mb:msg(JSON,assembly,JSON,Properties)" var="MessageAssembly1">
             <cast derivedFrom="MB:JSON_TYPE" path="$MessageAssembly1/JSON/Data/type('anyType')" qualifier="{http://www.ibm.com/iib/msl/json}PIXSpecification-ITEM_Level.schema_JsonType" ref="var"/>

@@ -6,13 +6,13 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/WMSfromManhattan/icons/full/obj16/RHC_RLCFromManhattan.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/WMSfromManhattan/icons/full/obj30/RHC_RLCFromManhattan.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="41,115" inputDirectory="C:\Users\atopp\Downloads\WMS_test_files" filenamePattern="TestJsonRhcRcl.json" messageDomainProperty="JSON" messageSetProperty="PIXSpecification-ITEM_Level.schema.json">
+      <nodes xmi:type="ComIbmFileInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="-456,65" inputDirectory="C:\Users\atopp\Downloads\WMS_test_files" filenamePattern="TestJsonRhcRcl.json" messageDomainProperty="JSON" messageSetProperty="PIXSpecification-ITEM_Level.schema.json">
         <translation xmi:type="utility:ConstantString" string="fromManhattan"/>
       </nodes>
       <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="247,110" mappingExpression="msl://{default}#RHC_RLCFromManhattan_createInventoryMsg">
         <translation xmi:type="utility:ConstantString" string="createInventoryMsg"/>
       </nodes>
-      <nodes xmi:type="ComIbmPassthru.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="249,47">
+      <nodes xmi:type="ComIbmPassthru.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="239,11">
         <translation xmi:type="utility:ConstantString" string="error"/>
       </nodes>
       <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="701,291" outputDirectory="C:\Users\atopp\Downloads\WMS_test_files" outputFilename="testInventory.xml">
@@ -37,11 +37,14 @@
     </composition>
     <propertyOrganizer/>
     <stickyBoard>
-      <stickyNote location="466,93" association="FCMComposite_1_2">
-        <body xmi:type="utility:ConstantString" string="Once I get the sample JSON file from Manhattan, update this map. "/>
+      <stickyNote location="500,27" association="FCMComposite_1_2">
+        <body xmi:type="utility:ConstantString" string="Once I get the sample JSON file from Manhattan, update this map. &#xA;&#xA;I created the schema using the sample JSON message provided by Manhattan.&#xA;E:\Employer - AWG - 2025\Projects\WMS Project\Archive2025-09-25 from PierceBarcio at Manhattan\AWG_PIX_Events.xlsx&#xA;&#xA;The header part of the message came from another sample message provided by Manhattan.&#xA;E:\Employer - AWG - 2025\Projects\WMS Project\2025-09-25 sample message with hdr from PierceBarcio.txt&#xA; "/>
       </stickyNote>
       <stickyNote location="273,354" association="FCMComposite_1_6">
         <body xmi:type="utility:ConstantString" string="I have 5 others elements that I need to map once I get the sample JSON file from Manhattan.&#xA;I wasn't sure which attributes to use."/>
+      </stickyNote>
+      <stickyNote location="-456,137" association="FCMComposite_1_1">
+        <body xmi:type="utility:ConstantString" string="TestJsonRhcRcl.json&#xA;&#xA;Test file created in &#xA;&quot;CreateSampleManhattanJsonFile.msgflow.&#xA;&#xA;Hopefully, this will be close to the JSON file that we get from&#xD;&#xA;&#x9;Manhattan."/>
       </stickyNote>
     </stickyBoard>
   </eClassifiers>
