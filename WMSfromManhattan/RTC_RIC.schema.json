@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "header": {
+      "type": "object",
+      "properties": {
+        "messageId": {
+          "type": "string"
+        },
+        "messageTimestamp": {
+          "type": "string"
+        },
+        "FCLTY_CD": {
+          "type": "string"
+        }
+      },
+      "required": [
+      ]
+    },
+    "RTC": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Owner": {
+            "type": "string"
+          },
+          "SSCC": {
+            "type": "string"
+          },
+          "SSCCParent": {
+            "type": "string"
+          },
+          "TUType": {
+            "type": "string"
+          },
+          "ReceiveDate": {
+            "type": "string"
+          },
+          "Weight": {
+            "type": "number"
+          },
+          "AcceptanceFlag": {
+            "type": "number"
+          },
+          "ReasonCode": {
+            "type": "string"
+          },
+          "ReasonText": {
+            "type": "string"
+          },
+          "RIC": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Owner": {
+                  "type": "string"
+                },
+                "SSCC": {
+                  "type": "string"
+                },
+                "PoIdent": {
+                  "type": "string"
+                },
+                "PoLineIdent": {
+                  "type": "string"
+                },
+                "ProdIdent": {
+                  "type": "string"
+                },
+                "UM": {
+                  "type": "string"
+                },
+                "BatchNo": {
+                  "type": "string"
+                },
+                "ExpiryDate": {
+                  "type": "string"
+                },
+                "QState": {
+                  "type": "number"
+                },
+                "QtyHost": {
+                  "type": "number"
+                },
+                "Weight": {
+                  "type": "number"
+                }
+              },
+              "required": [
+              ]
+            }
+          }
+        },
+        "required": [
+        ]
+      }
+    }
+  },
+  "required": [
+  ]
+}
