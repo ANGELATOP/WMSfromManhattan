@@ -2,7 +2,7 @@
     <input path="/INVENTORY_RECEIPT_INB.xsd"/>
     <output path="/INVENTORY_RECEIPT_INB.xsd"/>
     <generation engine="xquery"/>
-    <mappingDeclaration name="RHC_RLCFromManhattan_mapSpaces">
+    <mappingDeclaration name="RHC_RLCFromManhattan_mapEmptySpaces">
         <input path="mb:msg(INVENTORY_RECEIPT_IFD,assembly,XMLNSC,Properties)" var="MessageAssembly"/>
         <output path="mb:msg(INVENTORY_RECEIPT_IFD,assembly,XMLNSC,Properties)" var="MessageAssembly1"/>
         <move>
@@ -16,55 +16,55 @@
                         <input path="$INVENTORY_RECEIPT_IFD_SEG/."/>
                         <output path="."/>
                         <override>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="TRNNUM"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="ORGCOD"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="REVLVL"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="LOTNUM"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="TRKNUM"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="HSTACC"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="RETCOD"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="SUBNUM"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="INVSLN"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="EXPQTY"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="SADNUM"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="WAYBILL"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="ORGREF"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="RIMFLG"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="CATCH_UNTTYP"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="CATCH_QTY"/>
                             </assign>
-                            <assign value=" ">
+                            <assign value="">
                                 <output path="VC_TOTQTY"/>
                             </assign>
                         </override>

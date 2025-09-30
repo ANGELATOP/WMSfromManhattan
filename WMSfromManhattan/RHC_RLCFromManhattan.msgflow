@@ -24,8 +24,8 @@
       <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="273,282" mappingExpression="msl://{default}#RHC_RLCFromManhattan_mapHardcodeValues">
         <translation xmi:type="utility:ConstantString" string="mapHardcodeValues"/>
       </nodes>
-      <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="484,285" mappingExpression="msl://{default}#RHC_RLCFromManhattan_mapSpaces">
-        <translation xmi:type="utility:ConstantString" string="mapSpaces"/>
+      <nodes xmi:type="ComIbmMSLMapping.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="484,285" mappingExpression="msl://{default}#RHC_RLCFromManhattan_mapEmptySpaces">
+        <translation xmi:type="utility:ConstantString" string="mapEmptySpaces"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_3" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.in"/>
